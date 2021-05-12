@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Javaboolean boolean取值只有true和false两种，且不能与其他整型变量如0，1相转换 boolean的成员变量和类变量的默认值为false，但局部变量没有默认值，如果不初始化则会报错 boolean支持逻辑运算和比较运算，其中&amp;&amp;和&amp;，||和|本质上没有区别，但前者经过优化，执行短路原则，即若&amp;&amp;第一个运算数为假或||第一个运算数为真，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/05/13/Java/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Javaboolean boolean取值只有true和false两种，且不能与其他整型变量如0，1相转换 boolean的成员变量和类变量的默认值为false，但局部变量没有默认值，如果不初始化则会报错 boolean支持逻辑运算和比较运算，其中&amp;&amp;和&amp;，||和|本质上没有区别，但前者经过优化，执行短路原则，即若&amp;&amp;第一个运算数为假或||第一个运算数为真，">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200426115218714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2phcnZhbjU=,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-05-12T16:27:14.297Z">
+<meta property="article:modified_time" content="2021-04-27T11:25:43.904Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200426115218714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2phcnZhbjU=,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Java" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/13/Java/" class="article-date">
+  <time class="dt-published" datetime="2021-05-12T16:27:14.297Z" itemprop="datePublished">2021-05-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h4 id="boolean"><a href="#boolean" class="headerlink" title="boolean"></a>boolean</h4><ul>
+<li>boolean取值只有true和false两种，且不能与其他整型变量如0，1相转换</li>
+<li>boolean的成员变量和类变量的默认值为false，但局部变量没有默认值，如果不初始化则会报错</li>
+<li>boolean支持逻辑运算和比较运算，其中&amp;&amp;和&amp;，||和|本质上没有区别，但前者经过优化，执行短路原则，即若&amp;&amp;第一个运算数为假或||第一个运算数为真，则不执行后面的操作</li>
+</ul>
+<h4 id="char"><a href="#char" class="headerlink" title="char"></a>char</h4><ul>
+<li>采用16位Unicode编码，大小为2字节，范围从\u0000到\uffff，包括了ASCII码</li>
+<li>当不存在精度损失时，支持隐式转换为数值</li>
+</ul>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><ul>
+<li><p>创建：</p>
+<ol>
+<li>String newString = new String(stringLiteral) ;</li>
+<li>String newString =  stringLiteral ;</li>
+<li>String newString = s.intern() ; </li>
+</ol>
+<ul>
+<li><p>区别：</p>
+<p>1方法构造的字符串维护在堆中</p>
+<p>2方法构造的字符串维护在常量池中，当重复构造时，系统会先在常量池中寻找，若有相同的字符串则返回其地址；若没有则添加这个字符串再返回地址。</p>
+<p>1和2构造的对象一定不相同</p>
+</li>
+</ul>
+</li>
+<li><p>一些方法</p>
+<ul>
+<li><p>substring(int begin , int end)</p>
+<p>截取从begin开始，到end为止（不包括end）的子串</p>
+</li>
+<li><p>delete(int begin , int end)</p>
+<p>删除从begin开始，到end为止（不包括end）的子串</p>
+</li>
+<li><p>replace(int begin , int end , String newString)</p>
+<p>将从begin开始，到end为止（不包括end）的子串替换为newSring</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><ul>
+<li><p>数组是引用类型的变量，声明时并不会分配空间，必须通过new来实例化</p>
+<ol>
+<li><p>声明后使用new创建数组 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span>[] myList;</span><br><span class="line">myList = <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure></li>
+<li><p>声明的同时创建数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> myList[] = <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>数组创建后有默认值，如int为0，char为’\u0000’，boolean为false等</p>
+<ol>
+<li><p>数组可以在声明后的花括号提供初始值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span>[] myList = &#123;<span class="number">1.2</span> , <span class="number">3.6</span> , <span class="number">5.7</span>&#125;;</span><br></pre></td></tr></table></figure></li>
+<li><p>也可以在new的时候初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span>[] myList;</span><br><span class="line">myList = <span class="keyword">new</span> <span class="keyword">double</span>[]&#123;<span class="number">1</span> , <span class="number">2.4</span> , <span class="number">7.2</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>但声明后不能直接用{}初始化，必须new的同时初始化</p>
+</li>
+</ol>
+</li>
+<li><p>数组的赋值语句不能实现数组复制，属于浅拷贝，两个引用变量指向同一个数组对象</p>
+<ol>
+<li><p>使用循环赋值</p>
+</li>
+<li><p>调用System.arraycopy方法，要求两个数组都预先实例化</p>
+<p>原型：<code>public static void arraycopy(Object src ,int srcPos ,Object dest ,int destPos ,int length)</code></p>
+<p>即从源数组的srcPos开始，复制length个元素，到目的数组的destPos开始的length个位置，故要求两个数组都实例化</p>
+</li>
+<li><p>调用数组的clone方法，被复制的数组变量可以没有实例化，相当于新创建了一个数组对象，并将原来的对象内容复制过去，<code>x.clone() != x</code>表达式的结果为true</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><ul>
+<li><p>重载</p>
+<p>方法名称相同，但形参列表不同的方法。其中返回值类型可以不同，形参列表必须不同</p>
+</li>
+</ul>
+<h4 id="对象和类"><a href="#对象和类" class="headerlink" title="对象和类"></a>对象和类</h4><ul>
+<li><p>包 Package</p>
+<p>一组相关的类和接口的集合</p>
+<ul>
+<li><p>导入包内标识符的两种方式</p>
+<ol>
+<li><p>单类型导入 <code>import java.util.Arrays</code></p>
+<p>导入后，当前文件内不能定义同名的标识符，必须使用完全限定符</p>
+</li>
+<li><p>按需类型导入 <code>import java.util.*</code></p>
+<p>并未直接导入，当使用标识符时会检测二义性</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>可见性修饰符</p>
+<table>
+<thead>
+<tr>
+<th><strong>访问权限</strong></th>
+<th><strong>本类</strong></th>
+<th><strong>本包</strong></th>
+<th><strong>子类</strong></th>
+<th><strong>它包</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>X</td>
+</tr>
+<tr>
+<td>包级(默认)</td>
+<td>√</td>
+<td>√</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>private</td>
+<td>√</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody></table>
+<p>类的可见性修饰符只有包级（默认）和public</p>
+<p>tip:<em>子类类体中可以访问从父类继承来的protected成员 。但如果子类和父类不在同一个包里，子类里不能访问另外父类实例（非继承）的protected成员。</em></p>
+</li>
+<li><p>注解<code>@override</code></p>
+<ol>
+<li>可以作为数字方便阅读</li>
+<li>编译器会验证@override下的方法名是否为父类所有，如果没有则会报错。如果不加注解，则方法名写错时编译器会将其当成子类中增加的方法</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> radius;</span><br><span class="line">    <span class="comment">/** 私有静态变量，记录当前内存里被实例化的Circle对象个数*/</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> numberOfObjects = <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Circle</span><span class="params">()</span> </span>&#123; radius = <span class="number">1.0</span>; numberOfObjects++; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Circle</span><span class="params">(<span class="keyword">double</span> newRadius)</span> </span>&#123; radius = newRadius; numberOfObjects++; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getRadius</span><span class="params">()</span> </span>&#123;<span class="keyword">return</span> radius;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setRadius</span><span class="params">(<span class="keyword">double</span> newRadius)</span> </span>&#123; radius = newRadius;&#125;</span><br><span class="line">    <span class="comment">/** 公有静态方法，获取私有静态变量内容*/</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getNumberOfObjects</span><span class="params">()</span> </span>&#123;<span class="keyword">return</span> numberOfObjects;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Return the area of this circle */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">findArea</span><span class="params">()</span> </span>&#123;  <span class="keyword">return</span> radius * radius * Math.PI; &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">finalize</span><span class="params">()</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        numberOfObjects--; <span class="comment">//对象被析构时，计数器减1</span></span><br><span class="line">        <span class="keyword">super</span>.finalize();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>this引用</p>
+<p>this是指向调用对象本身的引用名，可以用来访问类的隐藏数据域，如set方法设置private变量的值；也可以用于调用构造方法，如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">double</span> radius;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Circle</span><span class="params">(<span class="keyword">double</span> radius)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.radius = radius;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Circle</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>(<span class="number">1.0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>Object类</p>
+</li>
+</ul>
+<h4 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h4><p>初始化块</p>
+<ul>
+<li><p>实例初始化模块</p>
+<p>用大括号括起的语句块，不在方法内，相当于放在了类中每个构造函数的最开始的位置。</p>
+<p>一个类可以有多个初始化模块，按照它们出现的顺序执行。</p>
+<p>匿名类没有构造函数，在使用内部匿名类时，可以用实例初始化模块初始化数据成员</p>
+</li>
+<li><p>静态初始化模块</p>
+<p>static修饰的语句块{}，只能访问静态成员，在类装入内存时调用。</p>
+<p>类体内直接定义静态变量相当于静态初始化块</p>
+</li>
+</ul>
+<p>多态</p>
+<ul>
+<li>通过引用变量调用实例函数时，根据所引用的实际对象的类型，执行该类型的相应实例方法，从而表现出不同的行为称为多态。通过继承时覆盖父类的实例方法实现多态</li>
+<li>原理：在运行时根据引用变量指向对象的实际类型，重新计算调用方法的入口地址（晚期绑定）。</li>
+</ul>
+<p>final</p>
+<ol>
+<li>修饰变量：常量</li>
+<li>修饰方法：静态方法不可被隐藏，实例方法不可被子类覆盖</li>
+<li>修饰类：最终类，不可派生子类</li>
+</ol>
+<h4 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h4><ul>
+<li><p>接口</p>
+<p>接口是<strong>公共静态常量</strong>和<strong>公共抽象实例方法</strong>的集合。接口是能力、规范、协议的反映。</p>
+</li>
+</ul>
+<h4 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h4><h4 id="文本I-O"><a href="#文本I-O" class="headerlink" title="文本I/O"></a>文本I/O</h4><h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><ul>
+<li><p>RTTI - 运行时类型识别</p>
+<p>每个类都有一个对应的Class对象（名字为Class的类），JVM在加载这个类的时候就会产生一个Class对象。在运行时，Java通过Class类的对象识别出类型信息。</p>
+</li>
+<li><p>泛型类的参数类型必须是引用类型</p>
+</li>
+<li><p>泛型方法</p>
+<ul>
+<li><p><strong>调用泛型方法，将实际类型放于&lt;&gt;之中方法名之前。</strong>也可以不显式指定实际类型，而直接给实参调用，如</p>
+<p>print(integers); print(strings);由编译器自动发现实际类型</p>
+</li>
+<li><p><strong>声明泛型方法，将类型参数<E>置于返回类型之前。</strong>方法的类型参数可以作为形参类型，方法返回类型，也可以用在方法体内其他类型可以用的地方</p>
+</li>
+</ul>
+</li>
+<li><p>通配泛型</p>
+<ul>
+<li><p>非受限通配&lt;?&gt;</p>
+<p>等价于？extends Object。不是原始类型</p>
+</li>
+<li><p>上界通配&lt;? extends E&gt;    </p>
+<ol>
+<li><p>表示E或E的子类</p>
+</li>
+<li><p>采用上界通配泛型的容器，如<code>ArrayList&lt;? extends Fruit&gt; list = new ArrayList&lt;Apple&gt;()</code>可编译通过，但list只能读取元素，不能添加元素，因为读取时的类型都是Fruit，但添加的类型无法确定</p>
+</li>
+</ol>
+</li>
+<li><p>下界通配&lt;? super E&gt;</p>
+<ol>
+<li>表示E或E的父类</li>
+<li>采用下界通配泛型的容器，如<code>ArrayList&lt;? super Fruit&gt; list = new ArrayList&lt;Object&gt;()</code>可编译通过，但list只能写入Fruit和Fruit的子类对象，最好不要读取元素，因为list的上界是Object，当使用get方法时，编译器会自动解释为Object对象</li>
+</ol>
+</li>
+<li><p>使用原则：PECS(<strong>Producer Extends</strong>，<strong>Consumer Super</strong>)</p>
+<p><strong>Producer Extends</strong>：如果需要一个<strong>只读泛型类</strong>，用来<strong>Produce T</strong>，那么用 <strong>？ extends T</strong></p>
+<p><strong>Consumer Super</strong>： 如果需要一个<strong>只写泛型类</strong>，用来<strong>Consume T</strong>，那么用 <strong>？ super  T</strong></p>
+<p>​    如果需要同时读取和写入，那么就不能用通配符。</p>
+</li>
+</ul>
+</li>
+<li><p>泛型擦除</p>
+<p>当编译通过后，泛型类型是安全的，编译器会将泛型类型擦除，将其转换为原始类型，所有参数化类型（实例类型）ArrayList<String> 、ArrayList<Fruit> 在运行时共享同一个类型：ArrayList</p>
+</li>
+<li><p>对泛型的限制</p>
+</li>
+</ul>
+<h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><h6 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a>创建线程</h6><ul>
+<li><p>Runnable接口</p>
+<p>实现了Runnable接口的类，是一个线程任务类(TaskClass)，通过这个类可以创建一个任务对象task，然后以这个task对象为参数，可以new Thread对象。Thread对象表示一个线程，该线程执行的任务由任务对象task确定，具体执行的任务定义在该任务类实现的接口方法void run中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Custom task class</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TaskClass</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="comment">//可以有自己的数据成员</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TaskClass</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Implement the run method in Runnable</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//Tell system how to run custom thread</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Client Class</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">someMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Create an instance of TaskClass</span></span><br><span class="line">        Runnable task = <span class="keyword">new</span> TaskClass();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Create a thread</span></span><br><span class="line">        Thread thread = <span class="keyword">new</span> Thread(task);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Start a thread</span></span><br><span class="line">        thread.start(); <span class="comment">// 启动后自动执行task.run</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>线程类Thread</p>
+<p>继承了Thread类的子类subThread，并覆盖了Thread类的run方法后，可以通过new subTread创建一个新的线程对象，该子类的对象执行的方法由覆盖的run方法描述</p>
+</li>
+</ul>
+<h6 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h6><ul>
+<li><p>竞争</p>
+<p>多个线程同时访问公共资源，会导致竞争状态（同时去修改公共资源）。为了避免竞争状态，应该防止多个线程同时进入程序的某一特定部分，这样的部分叫<strong>临界区</strong>。</p>
+</li>
+<li><p>synchronized关键字</p>
+<ul>
+<li><p>实例方法：相当于synchronized(this){}</p>
+<p>一旦线程进入类A的对象o的synchronized实例方法，对象o被加锁，此时o的所以synchronized实例方法都被锁住，但A其他对象不受影响</p>
+</li>
+<li><p>静态方法：相当于synchronized(A.class){}</p>
+<p>一旦线程进入类A的一个静态同步方法，A的所有静态同步方法都被锁，该同步与访问静态同步方法的方式无关，即通过类名访问和通过对象访问的效果是一样的</p>
+</li>
+<li><p>synchronized关键字隐式支持可重入锁</p>
+</li>
+</ul>
+</li>
+<li><p>Lock对象</p>
+<ul>
+<li>查看Lock对象锁定的临界区</li>
+<li>确定Lock对象本身是否不同，因为不同的Lock实例对象阻塞的线程可能不同</li>
+</ul>
+</li>
+</ul>
+<h6 id="线程协作"><a href="#线程协作" class="headerlink" title="线程协作"></a>线程协作</h6><ul>
+<li><p>条件对象Condition</p>
+<p>await：进入等待状态并释放锁</p>
+<p>signal，signalAll：唤醒等待的线程</p>
+</li>
+<li><p>信号量对象Semaphore</p>
+<p>是一个有计数器的锁，用于限制访问一个共享资源的线程数</p>
+</li>
+</ul>
+<h4 id="JavaFX"><a href="#JavaFX" class="headerlink" title="JavaFX"></a>JavaFX</h4><ul>
+<li><p>发展</p>
+<p>AWT -&gt;     Swing -&gt;     JavaFX</p>
+</li>
+<li><p>基本结构</p>
+<ul>
+<li><p>Main</p>
+<p>负载启动程序，可以存储一些应用总体信息：数据库连接，登录用户及口令等</p>
+</li>
+<li><p>Controller</p>
+<p>处理界面中的事件，和Main，fxml界面以及model分别关联</p>
+</li>
+<li><p>fxml</p>
+<p>界面配置文件，可以使用css设置界面中UI的样式，通过fx:id和@FXML绑定controller和界面内的UI组件</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="事件驱动编程和动画"><a href="#事件驱动编程和动画" class="headerlink" title="事件驱动编程和动画"></a>事件驱动编程和动画</h4><h6 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h6><h4 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h4><ul>
+<li><p>引言</p>
+<p><strong>网络：</strong>计算机之间的通信分为4层</p>
+<p><strong>IP：</strong>在互联网上，IP(Internet Protocol)地址用于唯一标识一台计算机，其由4位或6位的0~255的十进制数组成</p>
+<p><strong>domain：</strong>域名，是IP地址的映射，一个IP有唯一对应的域名</p>
+<p><strong>DNS：</strong>域名服务器(Domain Name Server)，将域名转化为IP地址，计算机首先发送请求到DNS，然后获得IP地址继续发生请求</p>
+<p><strong>TCP：</strong>传输控制协议(Transmission Control Protocol)，能够让两个主机建立连接并交换数据流(基于流stream的通信)，它可以发现数据信息的丢失，并重新发送，因此过程是无损和可靠的</p>
+<ul>
+<li>TCP三次握手<ol>
+<li>客户端发送syn报文，置发送序号为X</li>
+<li>服务端发送syn+ACK报文，置发送序号为Y，再确认序号为X+1</li>
+<li>客户端发送ACK报文，置发送序号为Z，再确认序号为Y+1</li>
+</ol>
+</li>
+<li>TCP四次挥手<ol>
+<li>主动方发送Fin+Ack报文，置发送序号为X</li>
+<li>被动方发送ACK报文，置发送序号为Z，再确认序号为X+1</li>
+<li>被动方发送Fin+Ack报文，置发送序号为Y，再确认序号为X</li>
+<li>主动方发送ack报文，置发送序号为x，再确认序号为Y</li>
+</ol>
+</li>
+</ul>
+<p><strong>UDP：</strong>用户数据报协议(User Datagram Protocol)，能够让两个主机建立连接并交换数据报(基于包package的通信)，但它不能保证是否丢失信息</p>
+<p><strong>URL：</strong>统一资源定位符(Uniform Resource Locator)，表示互联网上某一资源的地址，通常包含五个部分</p>
+<p><code>&lt;传输协议&gt;://&lt;主机名&gt;:&lt;端口号&gt;/&lt;文件名&gt;#&lt;片段名&gt;?参数列表</code>，如：</p>
+<p><code>http://192.168.1.1:8080/index.jsp#a?username=shkstart&amp;password=123</code></p>
+<p><strong>socket：</strong>套接字，是两台主机逻辑连接的端点，用于发送和接收数据</p>
+<p><strong>端口：</strong>标识计算机上运行的进程(程序)，不同的进程对应于不同的端口。端口号是一个16位整数，范围为0~65535，其中：</p>
+<pre><code>1. 公用端口为0~1023，被预定义的服务通信占用，如HTTP占用端口80，FTP占用端口21
+</code></pre>
+<ol start="2">
+<li>注册端口为1024~49151，分配给用户进程或应用程序，如Tomcat占用8080，MySQL占用3306</li>
+<li>动态/私有端口为49152~65535，</li>
+</ol>
+</li>
+<li><p>InetAddress类</p>
+<p>对IP地址建模，可以获取客户端的主机或IP名，也可以用于创建IP实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.获取socket连接的InetAddress实例</span></span><br><span class="line">	InetAddress inetAddress = socket.getInetAddress;</span><br><span class="line">	inetAddress = InetAddress.getLocalHost();<span class="comment">//获取本地主机的InetAddress</span></span><br><span class="line"><span class="comment">//2.通过InetAddress实例获取连接到的主机名和IP地址</span></span><br><span class="line">	System.out.println(<span class="string">&quot;Host name is :&quot;</span> + inetAddress.getHostname());</span><br><span class="line">	System.out.println(<span class="string">&quot;Host name is &quot;</span> + inetAddress.getAddress()); <span class="comment">//返回字节形式地址</span></span><br><span class="line">	System.out.println(<span class="string">&quot;Host name is &quot;</span> + inetAddress.getHostName());</span><br></pre></td></tr></table></figure></li>
+<li><p>Socket类</p>
+<ul>
+<li><p>TCP通信</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//客户端</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">client</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Socket socket = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//1.根据InetAddress和端口创建socket</span></span><br><span class="line">            socket = <span class="keyword">new</span> Socket(InetAddress.getByName(<span class="string">&quot;127.0.0.1&quot;</span>), <span class="number">8090</span>);</span><br><span class="line">            <span class="comment">//2.创建向socket写入流</span></span><br><span class="line">            OutputStream out = socket.getOutputStream();</span><br><span class="line">            <span class="comment">//3.读取文件流</span></span><br><span class="line">            FileInputStream inFile = <span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(<span class="string">&quot;ER图.png&quot;</span>));</span><br><span class="line">            <span class="comment">//4.文件流写入字节数组buffer</span></span><br><span class="line">            <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">            <span class="keyword">int</span> len;</span><br><span class="line">            <span class="keyword">while</span> ((len = inFile.read(buffer)) != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="comment">//5.从文件流读取的字节数组，写入socket流</span></span><br><span class="line">                out.write(buffer, <span class="number">0</span>, len);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//6.依次关闭</span></span><br><span class="line">            inFile.close();</span><br><span class="line">            out.close();</span><br><span class="line">            socket.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//服务端</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">server</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ServerSocket serverSocket = <span class="keyword">null</span>;</span><br><span class="line">        Socket socket = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//1.服务端创建ServerSocket</span></span><br><span class="line">            serverSocket = <span class="keyword">new</span> ServerSocket(<span class="number">8090</span>);</span><br><span class="line">            <span class="comment">//2.接受客户端请求并创建socket</span></span><br><span class="line">            socket = serverSocket.accept();</span><br><span class="line">            <span class="comment">//3.从socket读取流</span></span><br><span class="line">            InputStream in = socket.getInputStream();</span><br><span class="line">            <span class="comment">//4.字节数组写入文件流</span></span><br><span class="line">            FileOutputStream outFile = <span class="keyword">new</span> FileOutputStream(<span class="keyword">new</span> File(<span class="string">&quot;receivedFile.png&quot;</span>));</span><br><span class="line">            <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">            <span class="keyword">int</span> len;</span><br><span class="line">            <span class="keyword">while</span> ((len = in.read(buffer)) != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="comment">//5.从socket读取的流，转换成字节数组后写入文件流</span></span><br><span class="line">                outFile.write(buffer, <span class="number">0</span>, len);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//6.依次关闭</span></span><br><span class="line">            outFile.close();</span><br><span class="line">            in.close();</span><br><span class="line">            socket.close();</span><br><span class="line">            serverSocket.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>UDP通信</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    </span><br></pre></td></tr></table></figure></li>
+<li><p>URL通信</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    </span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>a</p>
+</li>
+</ul>
+<h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><ul>
+<li><p>MySQL配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  </span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ul>
+<h4 id="Java数据结构"><a href="#Java数据结构" class="headerlink" title="Java数据结构"></a>Java数据结构</h4><ul>
+<li><p>Queue</p>
+<p>是一个接口，一般采用LinkedList实现，使用offer/add添加元素，poll/remove获得并删除队首，peek/element获得但不删除队首（前者异常时返回null，后者异常时抛出异常）</p>
+<p>tip：也可以通过List接口实现</p>
+</li>
+<li><p>Arrays.asList()</p>
+<p>将数据类型为引用对象的数组转化为List集合</p>
+<ol>
+<li>数组更新时，List自动更新</li>
+<li>不支持add，remove等方法，长度不可变，只能用于遍历数组</li>
+</ol>
+<p>maches()</p>
+<p>String类的方法，参数为String类的的正则表达式regex，若匹配则返回true，反之返回false</p>
+</li>
+<li><p>sort()</p>
+<p>Collections类的一个方法，需要实现Comparable接口，排列顺序从小到大（自然顺序）</p>
+<ul>
+<li><p>关于Comparable和Comparator</p>
+<p>Comparable是内部比较器，Comparator是外部比较器。一个类可以通过实现Comparable接口从而具有有序性，也可以通过指定Comparator附加有序性。在实现了两个接口的类中，Comparator优先级高于Comparable</p>
+</li>
+</ul>
+</li>
+<li><p>Collection和Collections</p>
+<p>Collection是一个顶级的集合接口，其子类接口有List，Set，Queue等</p>
+<p>Collections是一个工具类，静态方法为主</p>
+<p><img src="https://img-blog.csdnimg.cn/20200426115218714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2phcnZhbjU=,size_16,color_FFFFFF,t_70" alt="Java集合框架图"></p>
+</li>
+<li><p>Serializable接口</p>
+<p>序列化机制允许将实现序列化的Java对象转换位字节序列，这些字节序列可以保存在磁盘上，或通过网络传输，以达到目的主机的目标进程，以后通过反序列化恢复成原来的对象。序列化机制使得对象可以脱离程序的运行而独立存在。<strong>序列化和反序列化不需要我们去关心文件的存储格式，特别是反序列化时不需要管对象的每个属性内容保存的格式。</strong></p>
+</li>
+<li><p>Map接口</p>
+<p>Map.Entry&lt;Key,Value&gt;</p>
+</li>
+<li><p>Java注释</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *&lt;pre&gt;</span></span><br><span class="line"><span class="comment"> *1.xxx</span></span><br><span class="line"><span class="comment"> *2.xxx</span></span><br><span class="line"><span class="comment"> *3.xxx</span></span><br><span class="line"><span class="comment"> *&lt;/pre&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<p>为了避免java生成doc时自动将注释格式化，需要加上<code>&lt;pre&gt;&lt;/pre&gt;</code>围住注释，保证doc中注释和源码中的注释格式相同</p>
+</li>
+</ul>
+<h4 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h4><h6 id="单件模式-Singleton-Pattern"><a href="#单件模式-Singleton-Pattern" class="headerlink" title="单件模式 Singleton Pattern"></a>单件模式 Singleton Pattern</h6>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/05/13/Java/" data-id="ckolok72y0002qop46h3j9tp5" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/13/JavaNotes/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/13/Java/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/13/JavaNotes/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/13/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/13/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
